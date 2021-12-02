@@ -4,8 +4,11 @@ Automate five test cases
 Technology stack
 
 · Programming language – C#
+
 · Testing framework – NUnit
+
 · Browser Automation – Selenium WebDriver
+
 · Reporting – Allure framework
 
 Tasks:
