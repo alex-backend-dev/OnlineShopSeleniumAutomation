@@ -36,20 +36,9 @@ namespace Automated_Test_Cases
 
             Assert.IsTrue(automationPracticeLoginPage?.IsDisplayedYourPersonalInformationBlock(), "Personal Information block isn't displayed");
             Assert.IsTrue(automationPracticeLoginPage?.IsDisplayedYourAddressBlock(), "Your address block isn't displayed");
-            automationPracticeLoginPage?
-                .FirstNameInitialize(Constant.Credentials.FirstName)
-                .LastNameInitialize(Constant.Credentials.LastName)
-                .PasswordInitialize(Constant.Credentials.Password)
-                .CompanyNameInitialize(Constant.Credentials.Company)
-                .AddressNameInitialize(Constant.Credentials.AddressInfo)
-                .AddressLine2Initialize(Constant.Credentials.AddressInfoLine2)
-                .CityNameInitialize(Constant.Credentials.City)
-                .ZipPostalCodeInitialize(Constant.Credentials.ZipPostalCode)
-                .AdditionalInfoInitialize(Constant.Credentials.AdditionalInfo)
-                .HomePhoneInfoInitialize(Constant.Credentials.HomePhone)
-                .MobilePhoneInfoInitialize(Constant.Credentials.MobilePhone)
-                .AddressInfoInitialize(Constant.Credentials.AddressAlias)
-                .RegisterBuilder();
+
+            automationPracticeLoginPage?.ParametersInitialize();
+            automationPracticeLoginPage?.RegisterBuilder();
 
             Assert.IsTrue(automationPracticeMyAccountPage?.IsReturnHomeLinkDisplayed(), "Home Link isn't displayed");
             Assert.IsTrue(automationPracticeMyAccountPage?.AtPageByTitle

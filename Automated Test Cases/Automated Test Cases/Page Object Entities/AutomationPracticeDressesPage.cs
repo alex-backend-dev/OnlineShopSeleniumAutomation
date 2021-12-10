@@ -25,30 +25,6 @@ namespace Automated_Test_Cases.Page_Object_Entities
         {
         }
 
-        private AutomationPracticeDressesPage ClickOnAFirstElement()
-        {
-            SearchAddToCartFirstElementButton.Click();
-            return this;
-        }
-
-        private AutomationPracticeDressesPage ClickOnASecondElement()
-        {
-            SearchAddToCartSecondElementButton.Click();
-            return this;
-        }
-
-        private AutomationPracticeDressesPage ClickOnAThirdElement()
-        {
-            SearchAddToCartThirdElementButton.Click();
-            return this;
-        }
-
-        private AutomationPracticeDressesPage ClickOnContinueShoppingButton()
-        {
-            SearchContinueShoppingButton.Click();
-            return this;
-        }
-
         public void AddFirstProductToACart()
         {
             MoveTo(driver, SearchPrintedDressFirstElement);
@@ -71,6 +47,30 @@ namespace Automated_Test_Cases.Page_Object_Entities
             ClickOnAThirdElement();
             IsDisplayed(driver, ContinueShoppingButton, 7);
             ClickOnContinueShoppingButton();
+        }
+
+        private AutomationPracticeDressesPage ClickOnAFirstElement()
+        {
+            SearchAddToCartFirstElementButton.Click();
+            return this;
+        }
+
+        private AutomationPracticeDressesPage ClickOnASecondElement()
+        {
+            SearchAddToCartSecondElementButton.Click();
+            return this;
+        }
+
+        private AutomationPracticeDressesPage ClickOnAThirdElement()
+        {
+            SearchAddToCartThirdElementButton.Click();
+            return this;
+        }
+
+        private AutomationPracticeDressesPage ClickOnContinueShoppingButton()
+        {
+            SearchContinueShoppingButton.Click();
+            return this;
         }
     }
 }

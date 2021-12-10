@@ -1,4 +1,5 @@
-﻿using Automated_Test_Cases.Page_Object_Entities.BasePage_Entity;
+﻿using Automated_Test_Cases.Constant_Entities;
+using Automated_Test_Cases.Page_Object_Entities.BasePage_Entity;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -240,6 +241,22 @@ namespace Automated_Test_Cases.Page_Object_Entities
         {
             SearchRegisterButton.Click();
             return this; 
+        }
+
+        public void ParametersInitialize()
+        {
+            FirstNameInitialize(Constant.Credentials.FirstName);
+            LastNameInitialize(Constant.Credentials.LastName);
+            PasswordInitialize(Constant.Credentials.Password);
+            CompanyNameInitialize(Constant.Credentials.Company);
+            AddressNameInitialize(Constant.Credentials.AddressInfo);
+            AddressLine2Initialize(Constant.Credentials.AddressInfoLine2);
+            CityNameInitialize(Constant.Credentials.City);
+            ZipPostalCodeInitialize(Constant.Credentials.ZipPostalCode);
+            AdditionalInfoInitialize(Constant.Credentials.AdditionalInfo);
+            HomePhoneInfoInitialize(Constant.Credentials.HomePhone);
+            MobilePhoneInfoInitialize(Constant.Credentials.MobilePhone);
+            AddressInfoInitialize(Constant.Credentials.AddressAlias);
         }
 
         public void RegisterBuilder()

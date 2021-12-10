@@ -44,19 +44,23 @@ namespace Automated_Test_Cases.Test_Entities.BaseTest_Entity
         }
 
         [TearDown]
-        public void CreateScreenshot()
+        public void TearDown()
+        {
+            CreateScreenshot();
+
+            if (driver != null)
+            {
+                driver.Quit();
+            }
+        }
+
+        private void CreateScreenshot()
         {
             if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
             {
                 var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
                 string path = Path.Combine(Environment.CurrentDirectory, @"TestResults\", "Screenshoot.jpg");
                 screenshot.SaveAsFile(path, ScreenshotImageFormat.Jpeg);
-                driver.Quit();
-            }
-
-            if (driver != null)
-            {
-                driver.Quit();
             }
         }
     }

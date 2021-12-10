@@ -8,7 +8,7 @@ namespace Automated_Test_Cases.Page_Object_Entities
     {
         private By ListOfSKU = By.CssSelector(".cart_item");
         private By TotalPriceBlock = By.XPath("//td[@class =  'total_price_container text-right']//parent::tr");
-        private By TotalPrice = By.XPath("//td[@class='price']/span[text()='$107.97']");
+        private By TotalPrice = By.XPath("//span[@id = 'total_price']");
 
         public IWebElement SearchTotalPrice => driver.FindElement(TotalPrice);
         public IList<IWebElement> SearchListOfSKU => driver.FindElements(ListOfSKU);
