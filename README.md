@@ -1,4 +1,4 @@
-# FinalTask-ISsoft-Training-
+# ISsoft Training (Final Task)
 Automate five test cases
 
 Technology stack
